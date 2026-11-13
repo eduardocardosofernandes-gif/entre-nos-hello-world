@@ -1,38 +1,26 @@
-# Entre Nós — Versão 2
+# Entre Nós V3
 
-Site demonstrativo Next.js com identidade visual premium, português (Portugal), inglês e espanhol, secções de experiências, planos e jogo interativo de perguntas.
+Protótipo Next.js com português (Portugal), inglês e espanhol, quatro jogos interativos, biblioteca de quatro artigos originais e desafio de sete dias.
 
-## Publicar no GitHub e Vercel
+## Executar
 
-1. Extrai `entre-nos-v2.zip`.
-2. Abre o teu repositório `entre-nos-hello-world` no GitHub.
-3. Substitui o `package.json` antigo pelo novo, substitui `app/page.tsx` e `app/layout.tsx`, e adiciona `app/globals.css`, `tsconfig.json` e `next-env.d.ts`.
-4. Se já existir `package-lock.json` do projeto anterior, elimina-o no GitHub antes de publicar (ou gera um novo executando `npm install` localmente e carrega-o). Isto evita incompatibilidades entre dependências.
-5. Faz commit das alterações na branch `main`. A Vercel fará um novo deploy automaticamente.
-6. Em caso de erro, abre Vercel > Deployments > Build Logs e copia a primeira mensagem de erro.
-
-## Testar localmente
-
-Requer Node.js 20 ou superior.
+Instala Node.js 20 ou superior. Na pasta que contém `package.json`:
 
 ```bash
 npm install
 npm run dev
 ```
 
-Abrir http://localhost:3000.
+Abre http://localhost:3000. Para verificar a compilação: `npm run build`.
 
-## O que está implementado
+## Atualizar GitHub / Vercel
 
-- Página inicial responsiva com visual vinho, rosa e creme.
-- Alternância PT/EN/ES no navegador.
-- Apresentação de 3 jogos e funcionamento.
-- Demo de jogo com 5 perguntas por idioma.
-- Planos demonstrativos, sem pagamentos.
+1. Extrai o ZIP e abre a pasta `entre-nos-v3`.
+2. No repositório GitHub existente, substitui os ficheiros `package.json`, `tsconfig.json`, `next-env.d.ts`, `app/layout.tsx`, `app/page.tsx` e `app/globals.css` pelos novos, mantendo as pastas.
+3. Não coloques a pasta `entre-nos-v3` inteira dentro da raiz do repositório: `package.json` deve ficar na raiz.
+4. Faz **Commit changes**. A Vercel deve fazer novo deploy automaticamente.
+5. Se existir `package-lock.json` antigo, atualiza-o com `npm install` e publica o lockfile novo; não mistures versões incompatíveis.
 
 ## Limitações
 
-- Não há contas de utilizadores, base de dados, Stripe, painel de administração ou conteúdos privados.
-- O idioma é escolhido no navegador e não cria URLs traduzidos para SEO.
-- Não introduzir dados íntimos reais na demo.
-- Rever segurança, RGPD e textos legais antes de lançamento comercial.
+Demonstração sem contas reais, pagamentos, CMS ou sincronização entre dispositivos. As respostas de jogos permanecem na memória da página e desaparecem ao atualizar; o desafio também não persiste nesta versão. Não introduzir dados pessoais sensíveis. A opção Desejos em Comum é um jogo local de demonstração: os parceiros devem alternar o dispositivo sem ver as escolhas do outro, mas não há isolamento seguro entre perfis. Para produção são necessárias autenticação, autorização, base de dados, política de privacidade, RGPD, revisão editorial e integração de pagamentos.
